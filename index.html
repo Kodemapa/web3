@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <script src="./lib/min.js"></script>
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
 
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -37,7 +36,7 @@
 
 </head>
 
-<body ng-app="app" ng-controller="cust">
+<body ng-app="app" ng-controller="ControllerName">
 
   <div class="hero_area">
 
@@ -64,7 +63,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  ">
               <li ng-repeat="pages in nav" class="nav-item active">
-                <a class="nav-link" href={{pages.href}}> {{page.text}}<span class="sr-only">(current)</span></a>
+                <!-- <a class="nav-link" href={{pages.href}}> {{page.text}}<span class="sr-only">(current)</span></a> -->
               </li>
               
               <form class="form-inline">
@@ -133,24 +132,24 @@
           </p>
         </div>
         <div class="row">
-          <div ng-repeat="service in sercices" class="col-md-4 ">
+          <div ng-repeat="service in services" class="col-md-4 ">
             <div class="box ">
               <div class="img-box">
                 <img src="{{service.src}}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  {{sercice.name}}
+                  {{service.name}}
                 </h5>
                 <p>
-                  {{sercice.description}}
+                  {{service.description}}
                 </p>
                 <a href="">
                  {{service.link}}
                 </a>
               </div>
             </div>
-          </div>
+          </div> 
           
         </div>
         <div class="btn-box">

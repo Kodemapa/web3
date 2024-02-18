@@ -1,2 +1,2 @@
 var app=angular.module("app",[])
-app.controller("custWhy", ["$scope", function ($scope) {
+app.controller("custWhy", function ($scope) {})
