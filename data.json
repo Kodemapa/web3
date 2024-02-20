@@ -1,106 +1,137 @@
 {
-    "hero": {
-        "description": "CRYPTO CURRENCY",
-        "info": "Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.",
-        "redirect": "link"
+  "nav":[
+    {
+      "text":"home",
+      "link":"index.html"
     },
-    "About Us": {
-        "name": "About Us",
-        "des": "Magni quod blanditiis non minus sed aut voluptatum illum quisquam aspernatur ullam vel beatae rerum ipsum voluptatibus",
-        "subHeading": "We Are Finexo",
-        "subHeadingInfo": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at iste corrupti officiis unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam ab omnis quasi expedita.",
-        "link":"link"
-},
-    "service": [
-        {
-            "name": "CURRENCY WALLET",
-            "description": "fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using",
-            "link": "<some value>",
-            "src": "images/s2.png"
-        },
-        {
-            "name": "Security Storage",
-            "description": "fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using",
-            "link": "<some value>",
-            "src": "images/s2.png"
-        }
-    ],
-    "about": {
-        "heading": "Magni quod blanditiis non minus sed aut voluptatum illum quisquam aspernatur ullam vel beatae rerum ipsum voluptatibus",
-        "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.All Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at iste corrupti officiis unde alias eius ducimus/reiciendis soluta eveniet. Nobis ullam ab omnis quasi expedita."
+    {
+      "text":"About Us",
+      "link":"#AboutUs"
     },
-    "whyChooseUs":[
-        {
-            "logo":"link",
-            "heading":"Expert Management",
-            "description":"Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus"
-        },
-        {
-            "logo":"link",
-            "heading":"Secure Investment",
-            "description":"Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus"
-        },
-        {
-            "logo":"link",
-            "heading":"Instant Trading",
-            "description":"Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus"
-        },
-        {
-            "logo":"link",
-            "heading":"Happy Customers",
-            "description":"Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus"
-        },
-        {
-            "link":"link"
-        }
-    ],
-    "OurTeam":[
-        {
-            "image":"",
-            "name":"Joseph Brown",
-            "position":"Marketing Head"
-        },
-        {
-            "image":"",
-            "name":"Nancy White",
-            "position":"Marketing Head"
-        },
-        {
-            "image":"",
-            "name":"Earl Martinez",
-            "position":"Marketing Head"
-        },
-        {
-            "image":"",
-            "name":"Josephine Allard",
-            "position":"Marketing Head"
-        }
-
-    ],
-    "customers":[
-        {
-            "image":"",
-            "author":"LusDen",
-            "subHeading":"magna aliqua. Ut",
-            "about":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "
-        },
-        {
-            "image":"",
-            "author":"Zen Court",
-            "subHeading":"magna aliqua. Ut",
-            "about":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis"
-        },
-        {
-            "image":"",
-            "author":"LusDen",
-            "subHeading":"magna aliqua. Ut",
-            "about":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis"
-        },
-        {
-            "image":"",
-            "author":"Zen Court",
-            "subHeading":"magna aliqua. Ut",
-            "about":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis"
-        }
-    ]
+    {
+      "text":"Contact Us",
+      "link":""
+    },
+    {
+      "text":"Login",
+      "link":""
     }
+  ],
+  "hero": {
+    "description": "Fund the next big thing",
+    "info": "Get the tech that gets people talking With both live crowdfunding campaigns and innovative products shipping now, there’s no better place to start the hunt for cool and clever innovations that surprise and delight. Invest in idea is where new launches.",
+    "redirect": "link"
+  },
+  "AboutUs": {
+    "name": "About Us",
+    "des": "Browse campaigns, read the stories from the entrepreneurs themselves, evaluate the stage of development and any potential production risks — and then fund the projects that you want to help succeed.",
+    "subHeading": "Feeling Inspired?",
+    "subHeadingInfo": "Many campaigns offer perks to say thanks to backers, in exchange for different contribution amounts. Perks can be objects, acknowledgement, a thank you, services, events or anything that does not violate our Terms of Use. Perks are listed on the right side of the Campaign page, under the \"Back It\" button. If you do not see any perks listed, the campaign owner may have decided not to offer any perks.",
+    "link": "link"
+  },
+  "services": {
+    "title": "Services",
+    "info": "Invest in idea crowdfunding campaigns are where new and groundbreaking products take flight, sometimes long before they hit mainstream availability. With thousands of campaigns launching every week, there's great tech, design, and much more around every corner — often with limited-time perks and pricing for the earliest backers. Before it's everywhere, it's on Invest in idea.",
+    "services": [
+      {
+        "name": "Get Expert Support",
+        "description": "Our platform fuels innovative investment ideas. Entrepreneurs present groundbreaking concepts, while investors discover exciting opportunities. ",
+        "src": "images/w1.png"
+      },
+      {
+        "name": "Secure all your info",
+        "description": "We prioritize your data security with cutting-edge encryption and robust safeguards. Trust us to keep your personal and financial information safe as you explore crowdfunding opportunities.",
+        "src": "images/s2.png"
+      },
+      {
+        "name": "Elevate your idea",
+        "description": " Let your ideas soar to new heights with our platform. We provide the tools and support to elevate your vision and turn it into reality.",
+        "src": "images/s3.png"
+      }
+    ]
+  },
+  "about": {
+    "heading": "Magni quod blanditiis non minus sed aut voluptatum illum quisquam aspernatur ullam vel beatae rerum ipsum voluptatibus",
+    "text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.All Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at iste corrupti officiis unde alias eius ducimus/reiciendis soluta eveniet. Nobis ullam ab omnis quasi expedita."
+  },
+  "whyChooseUs": [
+    {
+      "logo": "images/w1.png",
+      "heading": "Expert Management",
+      "description": "Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus"
+    },
+    {
+      "logo": "images/w2.png",
+      "heading": "Secure Investment",
+      "description": "Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus"
+    },
+    {
+      "logo": "images/w3.png",
+      "heading": "Instant Trading",
+      "description": "Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus"
+    },
+    {
+      "logo": "images/w4.png",
+      "heading": "Happy Customers",
+      "description": "Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil. Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus"
+    }
+  ],
+  "OurProjects": [
+    {
+      "image": "./images/team-1.jpg",
+      "name": "Joseph Brown",
+      "position": "Marketing Head"
+    },
+    {
+      "image": "./images/team-2.jpg",
+      "name": "Nancy White",
+      "position": "Marketing Head"
+    },
+    {
+      "image": "./images/team-3.jpg",
+      "name": "Earl Martinez",
+      "position": "Marketing Head"
+    },
+    {
+      "image": "./images/team-4.jpg",
+      "name": "Josephine Allard",
+      "position": "Marketing Head"
+    },
+    {
+      "image": "./images/team-3.jpg",
+      "name": "Earl Martinez",
+      "position": "Marketing Head"
+    },
+    {
+      "image": "./images/team-4.jpg",
+      "name": "Josephine Allard",
+      "position": "Marketing Head"
+    }
+  ],
+  "customers": [
+    {
+      "image": "",
+      "author": "LusDen",
+      "subHeading": "magna aliqua. Ut",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "
+    },
+    {
+      "image": "",
+      "author": "Zen Court",
+      "subHeading": "magna aliqua. Ut",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis"
+    },
+    {
+      "image": "",
+      "author": "LusDen",
+      "subHeading": "magna aliqua. Ut",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis"
+    },
+    {
+      "image": "",
+      "author": "Zen Court",
+      "subHeading": "magna aliqua. Ut",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis"
+    }
+  ]
+}

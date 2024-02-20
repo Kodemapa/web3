@@ -15,7 +15,7 @@
   <meta name="author" content="" />
   <link rel="shortcut icon" href="images/favicon.png" type="">
 
-  <title> Finexo </title>
+  <title>  INVEST IN IDEA </title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -46,13 +46,13 @@
       </div>
     </div>
 
-    <!-- header section strats -->
+    <!-- header section starts -->
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
             <span>
-              Finexo
+              INVEST IN IDEA
             </span>
           </a>
 
@@ -63,7 +63,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  ">
               <li ng-repeat="pages in nav" class="nav-item active">
-                <!-- <a class="nav-link" href={{pages.href}}> {{page.text}}<span class="sr-only">(current)</span></a> -->
+                <a class="nav-link" href={{pages.link}}> {{pages.text}}<span class="sr-only">(current)</span></a>
               </li>
               
               <form class="form-inline">
@@ -87,12 +87,12 @@
                 <div class="col-md-6 ">
                   <div class="detail-box">
                     <h1>
-                      Crypto <br>
-                      Currency
+                      {{hero.description}}
                     </h1>
                     <p>
-                      Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                    </p>
+                      {{hero.info}}
+                      <!-- Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi. -->
+                    </p>                    
                     <div class="btn-box">
                       <a href="" class="btn1">
                         Read More
@@ -125,17 +125,17 @@
       <div class="container ">
         <div class="heading_container heading_center">
           <h2>
-            Our <span>Services</span>
+            Our <span>{{services.title}}</span>
           </h2>
           <p>
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+            {{services.info}}
           </p>
         </div>
         <div class="row">
-          <div ng-repeat="service in services" class="col-md-4 ">
+          <div ng-repeat="service in services.services"class="col-md-4 ">
             <div class="box ">
               <div class="img-box">
-                <img src="{{service.src}}" alt="">
+                <img ng-src="{{service.src}}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
@@ -144,18 +144,9 @@
                 <p>
                   {{service.description}}
                 </p>
-                <a href="">
-                 {{service.link}}
-                </a>
               </div>
             </div>
           </div> 
-          
-        </div>
-        <div class="btn-box">
-          <a href="">
-            View All
-          </a>
         </div>
       </div>
     </div>
@@ -166,14 +157,16 @@
 
   <!-- about section -->
 
-  <section class="about_section layout_padding">
+  <section id="AboutUs" class="about_section layout_padding">
     <div class="container  ">
       <div class="heading_container heading_center">
         <h2>
-          About <span>Us</span>
+          {{AboutUs.name}}
+          <!-- About <span>Us</span> -->
         </h2>
         <p>
-          Magni quod blanditiis non minus sed aut voluptatum illum quisquam aspernatur ullam vel beatae rerum ipsum voluptatibus
+          {{AboutUs.des}}
+          <!-- Magni quod blanditiis non minus sed aut voluptatum illum quisquam aspernatur ullam vel beatae rerum ipsum voluptatibus -->
         </p>
       </div>
       <div class="row">
@@ -185,20 +178,12 @@
         <div class="col-md-6">
           <div class="detail-box">
             <h3>
-              We Are Finexo
+              {{AboutUs.subHeading}}
+              <!-- We Are Finexo -->
             </h3>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+              {{AboutUs.subHeadingInfo}}
             </p>
-            <p>
-              Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at iste corrupti officiis unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam ab omnis quasi expedita.
-            </p>
-            <a href="">
-              Read More
-            </a>
           </div>
         </div>
       </div>
@@ -217,62 +202,74 @@
         </h2>
       </div>
       <div class="why_container">
-        <div class="box">
+        <div ng-repeat="reasons in whyChooseUs" class="box">
           <div class="img-box">
-            <img src="images/w1.png" alt="">
+            <!-- {{reasons.logo}} -->
+            <img ng-src="{{reasons.logo}}" alt="">
           </div>
           <div class="detail-box">
             <h5>
-              Expert Management
+              {{reasons.heading}}
+              <!-- Expert Management -->
             </h5>
             <p>
-              Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
-              Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus
+              {{reasons.description}}
+              <!-- Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
+              Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus -->
             </p>
+          </div>
+        </div>
+        <!-- <div class="box">
+          <div class="img-box">
+            {{i.logo}} -->
+            <!-- <img src="images/w2.png" alt=""> -->
+          <!-- </div>
+          <div class="detail-box">
+            <h5>
+              {{i.heading}} -->
+              <!-- Secure Investment -->
+            <!-- </h5>
+            <p>
+              {{i.description}} -->
+              <!-- Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
+              Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus -->
+            <!-- </p>
+          </div>
+        </div> -->
+        <!-- <div class="box">
+          <div class="img-box">
+            {{i.logo}} -->
+            <!-- <img src="images/w3.png" alt=""> -->
+          <!-- </div>
+          <div class="detail-box">
+            <h5>
+              {{i.heading}} -->
+              <!-- Instant Trading -->
+            <!-- </h5>
+            <p>
+              {{i.description}} -->
+              <!-- Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
+              Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus -->
+            <!-- </p>
           </div>
         </div>
         <div class="box">
           <div class="img-box">
-            <img src="images/w2.png" alt="">
-          </div>
+            {{i.logo}} -->
+            <!-- <img src="images/w4.png" alt=""> -->
+          <!-- </div>
           <div class="detail-box">
             <h5>
-              Secure Investment
-            </h5>
-            <p>
-              Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
-              Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus
-            </p>
+              {{i.heading}} -->
+              <!-- Happy Customers -->
+            <!-- </h5>
+            <p> -->
+              
+              <!-- Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
+              Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus -->
+            <!-- </p>
           </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/w3.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Instant Trading
-            </h5>
-            <p>
-              Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
-              Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/w4.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Happy Customers
-            </h5>
-            <p>
-              Incidunt odit rerum tenetur alias architecto asperiores omnis cumque doloribus aperiam numquam! Eligendi corrupti, molestias laborum dolores quod nisi vitae voluptate ipsa? In tempore voluptate ducimus officia id, aspernatur nihil.
-              Tempore laborum nesciunt ut veniam, nemo officia ullam repudiandae repellat veritatis unde reiciendis possimus animi autem natus
-            </p>
-          </div>
-        </div>
+        </div> -->
       </div>
       <div class="btn-box">
         <a href="">
@@ -289,141 +286,35 @@
     <div class="container-fluid">
       <div class="heading_container heading_center">
         <h2 class="">
-          Our <span> Team</span>
+          Our Best <span>Funded Projects</span>
         </h2>
       </div>
 
       <div class="team_container">
         <div class="row">
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
+          <div class="col-lg-3 col-sm-6" ng-repeat="team in OurProjects">
+            <div  class="box ">
               <div class="img-box">
-                <img src="images/team-1.jpg" class="img1" alt="">
+                <!-- {{j.image}} -->
+                <img ng-src="{{team.image}}" class="img1" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Joseph Brown
+                  {{team.name}}
+                  <!-- Joseph Brown -->
                 </h5>
                 <p>
-                  Marketing Head
+                  {{team.position}}
+                  <!-- Marketing Head -->
                 </p>
               </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
+              
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-2.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Nancy White
-                </h5>
-                <p>
-                  Marketing Head
-                </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-3.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Earl Martinez
-                </h5>
-                <p>
-                  Marketing Head
-                </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="box ">
-              <div class="img-box">
-                <img src="images/team-4.jpg" class="img1" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Josephine Allard
-                </h5>
-                <p>
-                  Marketing Head
-                </p>
-              </div>
-              <div class="social_box">
-                <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+         
         </div>
+        
+        
       </div>
     </div>
   </section>
@@ -444,7 +335,7 @@
           <div class="item">
             <div class="box">
               <div class="img-box">
-                <img src="images/client1.jpg" alt="" class="box-img">
+                <img src="./images/client1.jpg" alt="" class="box-img">
               </div>
               <div class="detail-box">
                 <div class="client_id">
@@ -635,14 +526,14 @@
   <!-- end info section -->
 
   <!-- footer section -->
-  <section class="footer_section">
+  <!-- <section class="footer_section">
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
         <a href="https://html.design/">Free Html Templates</a>
       </p>
     </div>
-  </section>
+  </section> -->
   <!-- footer section -->
 
   <!-- jQery -->
