@@ -927,4 +927,38 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
+
+
+
+/*** Category ***/
+.cat-item {
+  display: block;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+  border: 1px solid transparent;
+  transition: .5s;
+}
+
+.cat-item:hover {
+  border-color: rgba(0, 0, 0, .08);
+  box-shadow: none;
+}
+
+
+/*** Job Listing ***/
+.nav-pills .nav-item .active {
+  border-bottom: 2px solid var(--primary);
+}
+
+.job-item {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+  transition: .5s;
+}
+
+.job-item:hover {
+  border-color: rgba(0, 0, 0, .08);
+  box-shadow: none;
+}
 /*# sourceMappingURL=style.css.map */
