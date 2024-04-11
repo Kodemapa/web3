@@ -15,6 +15,7 @@ app.controller("ControllerName", function ($scope, $http) {
         $scope.AboutUs=$scope.pageInfo.AboutUs;
         $scope.services=$scope.pageInfo.services; 
         $scope.whyChooseUs=$scope.pageInfo.whyChooseUs;
+        $scope.projects=$scope.pageInfo.projects;
         $scope.OurProjects=$scope.pageInfo.OurProjects;
         if(OurProjects.length<8)
         {
@@ -23,6 +24,7 @@ app.controller("ControllerName", function ($scope, $http) {
 
             $scope.OurProjects=$scope.pageInfo.OurProjects.slice(0,8);
         }
+        
               
     }, function (error) {
         // Handle error
