@@ -1,0 +1,30 @@
+{
+    
+    "basic_info":
+      {
+        "heading1":"Startup Name",
+        "heading2":"Founding Date",
+        "heading3":"Website"
+      },
+    
+    "funding_info":
+    {
+      "heading1":"Total Funding Amount (USD)",
+      "heading2":"Number of Funding Rounds",
+      "heading3":"Age at First Funding Year"
+
+    },
+    
+    "operation_info":
+    {
+      "heading1":"Number of Milestones Achieved"
+      
+    },
+    "category_info":
+    {
+      "heading1":"Startup Category",
+      "heading2":"State Code",
+      "heading3":"City"
+    }
+
+  }

@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Startup Success Prediction Form</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <script src="../lib/min.js"></script>
+    <script  src="../js/raiser.js"></script>
+</head>
+<body ng-app="app" ng-controller="raiserController">
+
+
+<div class="wrappers">
+    <div class="header">
+        <ul>
+            <li class="active form_1_progessbar">
+                <div>
+                    <p>1</p>
+                </div>
+            </li>
+            <li class="form_2_progessbar">
+                <div>
+                    <p>2</p>
+                </div>
+            </li>
+            <li class="form_3_progessbar">
+                <div>
+                    <p>3</p>
+                </div>
+            </li>
+            <li class="form_4_progessbar">
+                <div>
+                    <p>4</p>
+                </div>
+            </li>
+            <li class="form_5_progessbar">
+                <div>
+                    <p>5</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="form_wrap">
+        <div class="form_1 data_info">
+            <h2>Basic Information</h2>
+            <form name="basicForm" novalidate="">
+                <div class="form_container">
+                    <div class="input_wrap">
+                        <label for="startup-name">{{basic_info.heading1}}<span class="star">*</span></label>
+                        <input type="text" id="startup-name" name="startup_name" class="input" ng-model="basic_info_entered.Startup_Name" required="">
+                        <span ng-show="basicForm.startup_name.$dirty && basicForm.startup_name.$touched">
+                            <span class="caution" ng-show="basicForm.startup_name.$error.required"><i class="fa fa-exclamation-circle"></i> Startup Name Required</span>
+                        </span>
+                    
+                        
+                    </div>
+                    <div class="input_wrap">
+                        <label for="date">{{basic_info.heading2}}<span class="star">*</span></label>
+                        <input type="date" id="founding-name" name="founding_date" class="input" ng-model="basic_info_entered.Founding_Date" required="">
+                        <span ng-show="basicForm.founding_date.$dirty && basicForm.founding_date.$touched">
+                            <span class="caution" ng-show="basicForm.founding_date.$error.required"><i class="fa fa-exclamation-circle"></i> Startup Name Required</span>
+                        </span>  
+                    </div>
+                    <div class="input_wrap">
+                        <label for="website">{{basic_info.heading3}}<span class="star">*</span></label>
+                        <input type="text" id="website" name="website" class="input" ng-model="basic_info_entered.Website" required="">
+                        <span ng-show="basicForm.website.$dirty && basicForm.website.$touched">
+                            <span class="caution" ng-show="basicForm.website.$error.required"><i class="fa fa-exclamation-circle"></i> Website Required</span>
+                        </span>  
+                    </div>
+        </div>
+        </form>
+        </div>
+        <div class="form_2 data_info" style="display: none;">
+            <h2>Funding Information</h2>
+            <form name="fundingForm" novalidate="">
+                <div class="form_container">
+                    <div class="input_wrap">
+                        <label for="funding">{{funding_info.heading1}}<span class="star">*</span></label>
+                        <input type="number" id="funding" name="funding" class="input" ng-model="funding_info_entered.Total_Funding" required="">
+                        <span ng-show="fundingForm.funding.$dirty && fundingForm.funding.$touched">
+                            <span class="caution" ng-show="fundingForm.funding.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
+                        </span>  
+                    </div>
+                    <div class="input_wrap">
+                        <label for="rounds">{{funding_info.heading2}}<span class="star">*</span></label>
+                        <input type="number" id="rounds" name="rounds" class="input" ng-model="funding_info_entered.Number_of_Rounds" required="">
+                        <span ng-show="fundingForm.rounds.$dirty && fundingForm.rounds.$touched">
+                            <span class="caution" ng-show="fundingForm.rounds.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
+                        </span>  
+                    </div>
+                    <div class="input_wrap">
+                        <label for="age">{{funding_info.heading3}}<span class="star">*</span></label>
+                        <input type="number" id="age" name="age" class="input" ng-model="funding_info_entered.Age" required="">
+                        <span ng-show="fundingForm.age.$dirty && fundingForm.age.$touched">
+                            <span class="caution" ng-show="fundingForm.age.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
+                        </span>  
+                    </div>
+                
+                </div>
+            </form>
+        </div>
+        <div class="form_3 data_info" style="display: none;">
+            <h2>Operational Metrics</h2>
+            <form name="operationForm">
+                <div class="form_container">
+                    <div class="input_wrap">
+                        <label for="operation">{{operation_info.heading1}}<span class="star">*</span></label>
+                        <input type="number" id="operation" name="operation" class="input" ng-model="operation_info_entered.Operation" required>
+                        <span ng-show="operationForm.operation.$dirty && operationForm.operation.$touched">
+                            <span class="caution" ng-show="operationForm.operation.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
+                        </span> 
+                    </div>
+                </div>
+            </form>  
+        </div>
+        <div class="form_4 data_info" style="display: none;">
+            <h2>Category and Location</h2>
+            <form name="categoryForm">
+                <div class="form_container">
+                    <div class="input_wrap">
+                        <label for="category">{{category_info.heading1}}<span class="star">*</span></label>
+                        <select id="category" name="category" class="input" ng-model="category_info_entered.Category" required>
+                            <option value="advertising">Advertising</option>
+                            <option value="analytics">Analytics</option>
+                            <option value="automotive">Automotive</option>
+                            <option value="biotech">Biotech</option>
+                            <option value="cleantech">Cleantech</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="education">Education</option>
+                            <option value="enterprise">Enterprise</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="fashion">Fashion</option>
+                            <option value="finance">Finance</option>
+                            <option value="games_video">Games/Video</option>
+                            <option value="hardware">Hardware</option>
+                            <option value="health">Health</option>
+                            <option value="legal">Legal</option>
+                            <option value="lifestyle">Lifestyle</option>
+                            <option value="media">Media</option>
+                            <option value="medical">Medical</option>
+                            <option value="mobile">Mobile</option>
+                            <option value="music">Music</option>
+                            <option value="news">News</option>
+                            <option value="non_profit">Non-Profit</option>
+                            <option value="other">Other</option>
+                            <option value="pets">Pets</option>
+                            <option value="photo_video">Photo & Video</option>
+                            <option value="public_relations">Public Relations</option>
+                            <option value="real_estate">Real Estate</option>
+                            <option value="search">Search</option>
+                            <option value="security">Security</option>
+                            <option value="semiconductor">Semiconductor</option>
+                            <option value="social">Social</option>
+                            <option value="software">Software</option>
+                            <option value="sports">Sports</option>
+                            <option value="transportation">Transportation</option>
+                            <option value="travel">Travel</option>
+                            <option value="web">Web</option> 
+                        </select>
+                        <span ng-show="categoryForm.category.$dirty && categoryForm.category.$touched">
+                            <span class="caution" ng-show="categoryForm.category.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
+                        </span> 
+                    </div>
+                    <div class="input_wrap">
+                        <label for="code">{{category_info.heading2}}<span class="star">*</span></label>
+                        <input type="number" id="code" name="code" class="input" ng-model="category_info_entered.Code" required>
+                        <span ng-show="categoryForm.code.$dirty && categoryForm.code.$touched">
+                            <span class="caution" ng-show="categoryForm.code.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
+                        </span> 
+                    </div>
+                    <div class="input_wrap">
+                        <label for="city">{{category_info.heading3}}<span class="star">*</span></label>
+                        <input type="text" id="city" name="city" class="input" ng-model="category_info_entered.City" required>
+                        <span ng-show="categoryForm.city.$dirty && categoryForm.city.$touched">
+                            <span class="caution" ng-show="categoryForm.city.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
+                        </span> 
+                    </div> 
+                </div>
+            </form>  
+        </div>
+        <div class="form_5 data_info" style="display: none;">
+            <h2>Investment and Support</h2>
+            <form name="investForm">
+                <div class="form_container">
+                    <div class="input_wrap">
+                        Received VC Funding: </br>
+                        <input type="radio" id="vcYes" name="vcFunding" value="Yes">
+                        <label for="vcYes">Yes</label>
+                        <input type="radio" id="vcNo" name="vcFunding" value="No">
+                        <label for="vcNo">No</label><br><br>
+                        Received Angel Investment:<br>
+                        <input type="radio" id="angelYes" name="angelInvestment" value="Yes">
+                        <label for="angelYes">Yes</label>
+                        <input type="radio" id="angelNo" name="angelInvestment" value="No">
+                        <label for="angelNo">No</label><br><br>
+                    </div>
+                </div>
+            </form>  
+        </div>
+    </div>
+    <div class="btns_wrap">
+        <div class="common_btns form_1_btns">
+            <button type="button" ng-click="show_values()"  class="btn_next">Next <span class="icon" ><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+        </div>
+        <div class="common_btns form_2_btns" style="display: none;">
+            <button type="button" class="btn_back"><span class="icon"><ion-icon
+                        name="arrow-back-sharp"></ion-icon></span>Back</button>
+            <button type="button" class="btn_next">Next <span class="icon"><ion-icon
+                        name="arrow-forward-sharp"></ion-icon></span></button>
+        </div>
+        <div class="common_btns form_3_btns" style="display: none;">
+            <button type="button" class="btn_back"><span class="icon"><ion-icon
+                        name="arrow-back-sharp"></ion-icon></span>Back</button>
+            <button type="button" class="btn_next">Next <span class="icon"><ion-icon
+                        name="arrow-forward-sharp"></ion-icon></span></button>
+        </div>
+        <div class="common_btns form_4_btns" style="display: none;">
+            <button type="button" class="btn_back"><span class="icon"><ion-icon
+                        name="arrow-back-sharp"></ion-icon></span>Back</button>
+            <button type="button" class="btn_next">Next <span class="icon"><ion-icon
+                        name="arrow-forward-sharp"></ion-icon></span></button>
+        </div>
+        <div class="common_btns form_5_btns" style="display: none;">
+            <button type="button" class="btn_back"><span class="icon"><ion-icon
+                        name="arrow-back-sharp"></ion-icon></span>Back</button>
+            <button type="button" class="btn_done" ng-click="show_values()">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal_wrapper">
+    <div class="shadow"></div>
+    <div class="success_wrap">
+        <span class="modal_icon"><ion-icon name="checkmark-sharp"></ion-icon></span>
+        <p>You have successfully Completed the Registration.</p>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html
