@@ -13,7 +13,7 @@
     <!-- iCheck -->
     <link href="../../plugins/iCheck/square/blue.css" rel="stylesheet" type="text/css" />
     <script src="../../lib/min.js"></script>
-    <script  src="../../dist/js/login-controller.js"></script>
+    <script  src="/js/login-controller.js"></script>
     <link rel="stylesheet" href="../css/styles.css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,11 +26,11 @@
   <body ng-app="app" ng-controller="loginController" class="login-page">
     <div class="login-box">
       <div class="login-logo">
-        <a href="../../index2.html"><b>INVEST IN IDEA</b></a>
+        <a href="../main.html"><b>INVEST IN IDEA</b></a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
-        <form name="loginForm" action="../../index2.html" method="post" novalidate="">
+        <form name="loginForm" action="../main.html" method="post" novalidate="">
           <div class="form-group has-feedback">
             <input type="text" name="email" class="form-control" placeholder="Email" ng-model="login_info_entered.Email" required/>
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>

@@ -1,0 +1,36 @@
+{
+    "users":[
+        {
+            "Email":"pavan@gmail.com",
+            "First_name":"Pavan",
+            "Last_Name":"Sai",
+            "Password":"pavan",
+            "isInvestor":"true",
+            "isCrowdRaise":"false"
+        },
+        {
+            "Email":"xyz@gmail.com",
+            "First_name":"Jay Chandra",
+            "Last_Name":"Reddy",
+            "Password":"987456",
+            "isInvestor":"false",
+            "isCrowdRaise":"true"
+        },
+        {
+            "Email":"mno@gmail.com",
+            "First_name":"Sandhya",
+            "Last_Name":"Kothapalli",
+            "Password":"985123",
+            "isInvestor":"true",
+            "isCrowdRaise":"false"
+        },
+        {
+            "Email":"pqr@gmail.com",
+            "First_name":"Bhavani ",
+            "Last_Name":"KP",
+            "Password":"9856321",
+            "isInvestor":"false",
+            "isCrowdRaise":"true"
+        }
+    ]
+}

@@ -2,19 +2,23 @@
   "nav":[
     {
       "text":"home",
-      "link":"index.html"
+      "src":"index.html"
     },
     {
       "text":"About Us",
-      "link":"#AboutUs"
+      "src":"#AboutUs"
     },
     {
       "text":"Contact Us",
-      "link":""
+      "src":""
     },
     {
       "text":"Login",
-      "link":""
+      "src":"views/index.html"
+    },
+    {
+      "text":"SignUp",
+      "src":"views/register.html"
     }
   ],
   "hero": {

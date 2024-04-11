@@ -9,7 +9,7 @@ app.controller("loginController", function ($scope, $http) {
   };
 
   $scope.Submit = function () {
-    $http.get("../../login.json").then((response) => {
+    $http.get("../login.json").then((response) => {
       var userData = response.data; // Make sure this path is correct
       var userFound = userData.users.some(
         (user) =>
@@ -20,7 +20,7 @@ app.controller("loginController", function ($scope, $http) {
       if (userFound) {
         creatingUserObj(userData);
         $scope.PasswordError = false;
-        window.location.href = "dashboard.html"; // Changed to redirect in the same window/tab
+        window.location.href = "main.html"; // Changed to redirect in the same window/tab
       } else {
         $scope.PasswordError = true;
       }
