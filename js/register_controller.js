@@ -5,37 +5,26 @@ app.controller("registrationController", function ($scope, $http) {
   $scope.PasswordError = false;
 
   $scope.submitForm = function () {
-    $http.get("../../Dummy/User.json").then((response) => {
-      var userData = response.data; // Make sure this path is correct
-      var userFound = userData.users.some(
-        (user) =>
-          user.Email === $scope.user.email &&
-          user.Password === $scope.user.password
-      );
-
-      if (!userFound) {
-        createUserObj(userData);
-        $scope.PasswordError = false;
-        window.location.href = "index.html"; // Changed to redirect in the same window/tab
-      } else {
-        $scope.PasswordError = true;
-      }
-    });
+    createUserObj();
   };
 
-  var createUserObj = function (userData) {
-    userData.users.push({
-      FullName: $scope.user.fullName,
+  var createUserObj = function () {
+    $scope.registered_data_entered = {};
+    $scope.registrationData = {};
+    $scope.registered_data_entered = {
       Email: $scope.user.email,
+      First_name: $scope.user.fullName,
+      // "Last_Name":"Sai",
       Password: $scope.user.password,
-    });
-
-    // Send updated user data to server or update local storage
-    // Example:
-    $http.post("../../Dummy/User.json", userData).then(function(response) {
-      console.log("User added successfully");
-    }).catch(function(error) {
-      console.error("Error adding user: ", error);
-    });
+      registeras: $scope.user.type,
+    };
+    $http
+      .post("http://127.0.0.1:5000/signup", $scope.registered_data_entered)
+      .then(function (response) {
+        console.log("User added successfully");
+      })
+      .catch(function (error) {
+        console.error("Error adding user: ", error);
+      });
   };
 });

@@ -18,7 +18,7 @@ app.controller("raiserController", function ($scope, $http) {
 	$scope.category_info_entered={
 
 	};
-	
+	$scope.formData={}
 
 	$scope.show_values = function() {
 		console.log("Startup Name:", $scope.basic_info_entered.Startup_Name);
@@ -35,6 +35,27 @@ app.controller("raiserController", function ($scope, $http) {
 		console.log("State Code", $scope.category_info_entered.Code);
 		console.log("City", $scope.category_info_entered.City);
 
+		$scope.formData={
+			"startupName":$scope.basic_info_entered.Startup_Name,
+			"foundingDate":  $scope.basic_info_entered.Founding_Date,
+			"website": $scope.basic_info_entered.Website,
+			"totalFunding": $scope.funding_info_entered.Total_Funding,
+			"fundingRounds": $scope.funding_info_entered.Number_of_Rounds,
+			"ageFirstFunding":  $scope.operation_info_entered.Operation,
+			"milestones": $scope.operation_info_entered.Operation,
+			"category": $scope.category_info_entered.Category,
+			"stateCode":  $scope.category_info_entered.Code,
+			"city": $scope.category_info_entered.City,
+			"vcFunding": "Yes",
+			"angelInvestment":'Yes'
+		}
+		$http.post('http://127.0.0.1:5000/saveStartUp', $scope.formData)
+        .then(function(response) {
+            console.log("Post request was successful");
+			window.location.href='../main.html'
+        }, function(error) {
+            console.error("Post request failed:", error);
+        });
 		
     };
 
@@ -180,4 +201,5 @@ app.controller("raiserController", function ($scope, $http) {
 		modal_wrapper.classList.remove("active");
 	})
 });
+
 
