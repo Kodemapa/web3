@@ -1,20 +1,16 @@
 {
   "nav":[
     {
-      "text":"home",
-      "src":"index.html"
+      "text":"Home",
+      "src":""
     },
     {
       "text":"About Us",
       "src":"#AboutUs"
     },
     {
-      "text":"Contact Us",
-      "src":""
-    },
-    {
       "text":"Login",
-      "src":"views/index.html"
+      "src":"index.html"
     },
     {
       "text":"SignUp",

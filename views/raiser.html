@@ -4,14 +4,17 @@
 <head>
     <title>Startup Success Prediction Form</title>
     <link rel="stylesheet" href="../css/style1.css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <script src="../lib/min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"
+    type="text/css" />
     <script  src="../js/raiser.js"></script>
 </head>
 <body ng-app="app" ng-controller="raiserController">
 
 
 <div class="wrappers">
-    <div class="header">
+    <!-- <div class="header">
         <ul>
             <li class="active form_1_progessbar">
                 <div>
@@ -39,7 +42,7 @@
                 </div>
             </li>
         </ul>
-    </div>
+    </div> -->
     
     <div class="form_wrap">
         <div class="form_1 data_info">
@@ -48,26 +51,30 @@
                 <div class="form_container">
                     <div class="input_wrap">
                         <label for="startup-name">{{basic_info.heading1}}<span class="star">*</span></label>
-                        <input type="text" id="startup-name" name="startup_name" class="input" ng-model="basic_info_entered.Startup_Name" required="">
+                        <input type="text" id="startup-name" name="startup_name" class="input" ng-pattern="/^[a-zA-Z\s]*$/" ng-model="basic_info_entered.Startup_Name" required="">
                         <span ng-show="basicForm.startup_name.$dirty && basicForm.startup_name.$touched">
                             <span class="caution" ng-show="basicForm.startup_name.$error.required"><i class="fa fa-exclamation-circle"></i> Startup Name Required</span>
                         </span>
-                    
+                        <span ng-show="basicForm.startup_name.$dirty && basicForm.startup_name.$error.pattern">
+                            <span class="caution"><i class="fa fa-exclamation-circle"></i>Enter a valid name</span>
+                         </span>
                         
                     </div>
                     <div class="input_wrap">
                         <label for="date">{{basic_info.heading2}}<span class="star">*</span></label>
-                        <input type="date" id="founding-name" name="founding_date" class="input" ng-model="basic_info_entered.Founding_Date" required="">
+                        <input type="date" id="founding-name" name="founding_date" class="input" min="2000-01-01" max="{{getCurrentDate()}}" ng-model="basic_info_entered.Founding_Date" required="">
                         <span ng-show="basicForm.founding_date.$dirty && basicForm.founding_date.$touched">
-                            <span class="caution" ng-show="basicForm.founding_date.$error.required"><i class="fa fa-exclamation-circle"></i> Startup Name Required</span>
+                            <span class="caution" ng-show="basicForm.founding_date.$error.required"><i class="fa fa-exclamation-circle"></i> Founding Date Required</span>
+                            <span class="caution" ng-show="basicForm.founding_date.$error.min"><i class="fa fa-exclamation-circle"></i> Not a valid Date </span>
                         </span>  
                     </div>
                     <div class="input_wrap">
-                        <label for="website">{{basic_info.heading3}}<span class="star">*</span></label>
-                        <input type="text" id="website" name="website" class="input" ng-model="basic_info_entered.Website" required="">
-                        <span ng-show="basicForm.website.$dirty && basicForm.website.$touched">
-                            <span class="caution" ng-show="basicForm.website.$error.required"><i class="fa fa-exclamation-circle"></i> Website Required</span>
-                        </span>  
+                        <label for="website">{{basic_info.heading3}}</label>
+                        <input type="email" id="website" name="email" class="input" ng-model="basic_info_entered.Website">
+                        <span ng-show="basicForm.email.$dirty && basicForm.email.$touched">
+                           
+                        </span>
+                        <span class="caution" ng-show="basicForm.email.$error.email"><i class="fa fa-exclamation-circle"></i> Please enter a valid website address</span> 
                     </div>
         </div>
         </form>
@@ -78,24 +85,28 @@
                 <div class="form_container">
                     <div class="input_wrap">
                         <label for="funding">{{funding_info.heading1}}<span class="star">*</span></label>
-                        <input type="number" id="funding" name="funding" class="input" ng-model="funding_info_entered.Total_Funding" required="">
+                        <input type="text" id="funding" name="funding" class="input" maxlength="5" ng-pattern="/^\d{1,3}(\.\d{1,2})?$/"
+                         ng-model="funding_info_entered.Total_Funding" required="">
                         <span ng-show="fundingForm.funding.$dirty && fundingForm.funding.$touched">
-                            <span class="caution" ng-show="fundingForm.funding.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
+                            <span class="caution" ng-show="fundingForm.funding.$error.required"><i class="fa fa-exclamation-circle"></i>This field is Required</span>
                         </span>  
+                        <span class="caution" ng-show="fundingForm.funding.$error.pattern"><i class="fa fa-exclamation-circle"></i> Please enter a valid amount</span>
                     </div>
                     <div class="input_wrap">
                         <label for="rounds">{{funding_info.heading2}}<span class="star">*</span></label>
-                        <input type="number" id="rounds" name="rounds" class="input" ng-model="funding_info_entered.Number_of_Rounds" required="">
+                        <input type="text" id="rounds" name="rounds" class="input" maxlength="5" ng-pattern="/^\d{1,3}(\.\d{1,2})?$/" ng-model="funding_info_entered.Number_of_Rounds" required="">
                         <span ng-show="fundingForm.rounds.$dirty && fundingForm.rounds.$touched">
-                            <span class="caution" ng-show="fundingForm.rounds.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
+                            <span class="caution" ng-show="fundingForm.rounds.$error.required"><i class="fa fa-exclamation-circle"></i>This field is Required</span>
                         </span>  
+                        <span class="caution" ng-show="fundingForm.rounds.$error.pattern"><i class="fa fa-exclamation-circle"></i> Please enter a valid entry</span>
                     </div>
                     <div class="input_wrap">
                         <label for="age">{{funding_info.heading3}}<span class="star">*</span></label>
-                        <input type="number" id="age" name="age" class="input" ng-model="funding_info_entered.Age" required="">
+                        <input type="text" id="age" name="age" class="input" maxlength="5" ng-pattern="/^\d{1,3}(\.\d{1,2})?$/" ng-model="funding_info_entered.Age" required="">
                         <span ng-show="fundingForm.age.$dirty && fundingForm.age.$touched">
                             <span class="caution" ng-show="fundingForm.age.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
-                        </span>  
+                        </span>
+                        <span class="caution" ng-show="fundingForm.age.$error.pattern"><i class="fa fa-exclamation-circle"></i> Please enter a valid entry</span>  
                     </div>
                 
                 </div>
@@ -107,10 +118,19 @@
                 <div class="form_container">
                     <div class="input_wrap">
                         <label for="operation">{{operation_info.heading1}}<span class="star">*</span></label>
-                        <input type="number" id="operation" name="operation" class="input" ng-model="operation_info_entered.Operation" required>
+                        <input type="text" id="operation" name="operation" class="input" maxlength="5" ng-pattern="/^\d{1,3}(\.\d{1,2})?$/" ng-model="operation_info_entered.Operation" required>
                         <span ng-show="operationForm.operation.$dirty && operationForm.operation.$touched">
-                            <span class="caution" ng-show="operationForm.operation.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
+                            <span class="caution" ng-show="operationForm.operation.$error.required"><i class="fa fa-exclamation-circle"></i>This field is Required</span>
                         </span> 
+                        <span class="caution" ng-show="operationForm.operation.$error.pattern"><i class="fa fa-exclamation-circle"></i> Please enter a valid entry</span>
+                    </div>
+                    <div class="input_wrap">
+                        <label for="age">{{operation_info.heading2}}<span class="star">*</span></label>
+                        <input type="number" id="age" name="age" class="input" min="18"  ng-model="operation_info_entered.Age" required="">
+                        <span ng-show="operationForm.age.$dirty && operationForm.age.$touched">
+                            <span class="caution" ng-show="operationForm.age.$error.required"><i class="fa fa-exclamation-circle"></i>This field is Required</span>
+                        </span>
+                        <span class="caution" ng-show="operationForm.age.$error.min"><i class="fa fa-exclamation-circle"></i>Age must be 18 or greater</span>
                     </div>
                 </div>
             </form>  
@@ -122,6 +142,7 @@
                     <div class="input_wrap">
                         <label for="category">{{category_info.heading1}}<span class="star">*</span></label>
                         <select id="category" name="category" class="input" ng-model="category_info_entered.Category" required>
+                            <option value="" disabled selected>Select Category</option>
                             <option value="advertising">Advertising</option>
                             <option value="analytics">Analytics</option>
                             <option value="automotive">Automotive</option>
@@ -166,17 +187,23 @@
                     </div>
                     <div class="input_wrap">
                         <label for="code">{{category_info.heading2}}<span class="star">*</span></label>
-                        <input type="number" id="code" name="code" class="input" ng-model="category_info_entered.Code" required>
+                        <input type="text" id="code" name="code" class="input" ng-pattern="/^\d{6}$/" ng-model="category_info_entered.Code" required>
                         <span ng-show="categoryForm.code.$dirty && categoryForm.code.$touched">
-                            <span class="caution" ng-show="categoryForm.code.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
+                            <span class="caution" ng-show="categoryForm.code.$error.required"><i class="fa fa-exclamation-circle"></i>This field is Required</span>
                         </span> 
+                        <span ng-show="categoryForm.code.$dirty && categoryForm.code.$error.pattern">
+                            <span class="caution"><i class="fa fa-exclamation-circle"></i>Enter a valid code</span>
+                        </span>
                     </div>
                     <div class="input_wrap">
                         <label for="city">{{category_info.heading3}}<span class="star">*</span></label>
-                        <input type="text" id="city" name="city" class="input" ng-model="category_info_entered.City" required>
+                        <input type="text" id="city" name="city" class="input" ng-pattern="/^[a-zA-Z\s]*$/" ng-model="category_info_entered.City" required>
                         <span ng-show="categoryForm.city.$dirty && categoryForm.city.$touched">
-                            <span class="caution" ng-show="categoryForm.city.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
+                            <span class="caution" ng-show="categoryForm.city.$error.required"><i class="fa fa-exclamation-circle"></i>This field is Required</span>
                         </span> 
+                        <span ng-show="categoryForm.city.$dirty && categoryForm.city.$error.pattern">
+                            <span class="caution"><i class="fa fa-exclamation-circle"></i>Enter a valid name</span>
+                         </span>
                     </div> 
                 </div>
             </form>  
@@ -187,15 +214,24 @@
                 <div class="form_container">
                     <div class="input_wrap">
                         Received VC Funding: </br>
+                        <label>
                         <input type="radio" id="vcYes" name="vcFunding" value="Yes">
-                        <label for="vcYes">Yes</label>
+                         Yes
+                        </label><br/>
+                        <label>
                         <input type="radio" id="vcNo" name="vcFunding" value="No">
-                        <label for="vcNo">No</label><br><br>
+                         No
+                        </label>
+                        <br><br>
                         Received Angel Investment:<br>
+                        <label>
                         <input type="radio" id="angelYes" name="angelInvestment" value="Yes">
-                        <label for="angelYes">Yes</label>
+                        Yes
+                        </label><br/>
+                        <label>
                         <input type="radio" id="angelNo" name="angelInvestment" value="No">
-                        <label for="angelNo">No</label><br><br>
+                        No
+                        </label><br><br>
                     </div>
                 </div>
             </form>  
@@ -203,30 +239,30 @@
     </div>
     <div class="btns_wrap">
         <div class="common_btns form_1_btns">
-            <button type="button"   class="btn_next">Next <span class="icon" ><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+            <button type="button" ng-class="{'disabled':basicForm.$valid}" ng-disabled="basicForm.$invalid"  class="btn_next">Next <span class="icon" ><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
         </div>
         <div class="common_btns form_2_btns" style="display: none;">
-            <button type="button" class="btn_back"><span class="icon"><ion-icon
+            <button type="button" ng-class="{'disabled':basicForm.$valid}" class="btn_back"><span class="icon"><ion-icon
                         name="arrow-back-sharp"></ion-icon></span>Back</button>
-            <button type="button" class="btn_next">Next <span class="icon"><ion-icon
+            <button type="button" class="btn_next"  ng-class="{'disabled':fundingForm.$valid}" ng-disabled="fundingForm.$invalid">Next <span class="icon"><ion-icon
                         name="arrow-forward-sharp"></ion-icon></span></button>
         </div>
         <div class="common_btns form_3_btns" style="display: none;">
-            <button type="button" class="btn_back"><span class="icon"><ion-icon
+            <button type="button" class="btn_back" ng-class="{'disabled':fundingForm.$valid}"><span class="icon"><ion-icon
                         name="arrow-back-sharp"></ion-icon></span>Back</button>
-            <button type="button" class="btn_next">Next <span class="icon"><ion-icon
+            <button type="button" class="btn_next" ng-class="{'disabled':operationForm.$valid}" ng-disabled="operationForm.$invalid">Next <span class="icon"><ion-icon
                         name="arrow-forward-sharp"></ion-icon></span></button>
         </div>
         <div class="common_btns form_4_btns" style="display: none;">
-            <button type="button" class="btn_back"><span class="icon"><ion-icon
+            <button type="button" class="btn_back" ng-class="{'disabled':operationForm.$valid}"><span class="icon"><ion-icon
                         name="arrow-back-sharp"></ion-icon></span>Back</button>
-            <button type="button" class="btn_next">Next <span class="icon"><ion-icon
+            <button type="button" class="btn_next" ng-class="{'disabled':categoryForm.$valid}" ng-disabled="categoryForm.$invalid">Next <span class="icon"><ion-icon
                         name="arrow-forward-sharp"></ion-icon></span></button>
         </div>
         <div class="common_btns form_5_btns" style="display: none;">
-            <button type="button" class="btn_back"><span class="icon"><ion-icon
+            <button type="button" class="btn_back" ng-class="{'disabled':categoryForm.$valid}"><span class="icon"><ion-icon
                         name="arrow-back-sharp"></ion-icon></span>Back</button>
-            <button type="button" class="btn_done" ng-click="show_values()">Submit</button>
+            <button type="button" class="btn_done" ng-class="{'disabled':investForm.$valid}" ng-disabled="investForm.$invalid" ng-click="show_values()">Submit</button>
         </div>
     </div>
 </div>

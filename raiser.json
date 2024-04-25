@@ -9,7 +9,7 @@
     
     "funding_info":
     {
-      "heading1":"Total Funding Amount (USD)",
+      "heading1":"Total Funding Amount",
       "heading2":"Number of Funding Rounds",
       "heading3":"Age at First Funding Year"
 
@@ -17,7 +17,8 @@
     
     "operation_info":
     {
-      "heading1":"Number of Milestones Achieved"
+      "heading1":"Number of Milestones Achieved",
+      "heading2":"Age"
       
     },
     "category_info":

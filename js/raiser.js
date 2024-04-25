@@ -21,20 +21,7 @@ app.controller("raiserController", function ($scope, $http) {
 	$scope.formData={}
 
 	$scope.show_values = function() {
-		console.log("Startup Name:", $scope.basic_info_entered.Startup_Name);
-		console.log("Founding Date:", $scope.basic_info_entered.Founding_Date);
-		console.log("Website:", $scope.basic_info_entered.Website);
-
-		console.log("Total Funding Amount(USD)", $scope.funding_info_entered.Total_Funding);
-		console.log("Number of Funding Rounds", $scope.funding_info_entered.Number_of_Rounds);
-		console.log("Age at First Funding Year", $scope.funding_info_entered.Age);
-
-		console.log("Number of Miilestones Achieved", $scope.operation_info_entered.Operation);
-
-		console.log("Startup Category", $scope.category_info_entered.Category);
-		console.log("State Code", $scope.category_info_entered.Code);
-		console.log("City", $scope.category_info_entered.City);
-
+		
 		$scope.formData={
 			"startupName":$scope.basic_info_entered.Startup_Name,
 			"foundingDate":  $scope.basic_info_entered.Founding_Date,
@@ -200,6 +187,15 @@ app.controller("raiserController", function ($scope, $http) {
 	shadow.addEventListener("click", function () {
 		modal_wrapper.classList.remove("active");
 	})
+	$scope.getCurrentDate = function () {
+		var today = new Date();
+		var dd = String(today.getDate()).padStart(2, '0');
+		var mm = String(today.getMonth() + 1).padStart(2, '0');
+		var yyyy = today.getFullYear();
+
+		today = yyyy + '-' + mm + '-' + dd;
+		return today;
+	}
 });
 
 

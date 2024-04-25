@@ -33,6 +33,7 @@ body{
 .star{
 	color: red;
 }
+
 .wrappers{
 	width: 750px;
 	max-width: 100%;
@@ -82,6 +83,10 @@ body{
 .wrappers .header ul li div{
 	padding: 5px;
 	border-radius: 50%;
+}
+.disabled {
+    background-color:var(--primary) !important; 
+     
 }
 
 .wrappers .header ul li p{
@@ -168,7 +173,7 @@ body{
 .wrappers .btns_wrap .common_btns button{
 	border: 0;
 	padding: 12px 15px;
-	background: var(--primary);
+	background: gray;
 	color: var(--white);
 	width: 135px;
 	justify-content: center;
@@ -182,7 +187,7 @@ body{
 }
 
 .wrappers .btns_wrap .common_btns button.btn_back{
-	background: var(--secondary);
+	background: var(--primary);
 	
 }
 
@@ -198,11 +203,11 @@ body{
 
 .wrappers .btns_wrap .common_btns button.btn_next:hover,
 .wrappers .btns_wrap .common_btns button.btn_done:hover{
-	background: var(--next-btn-hover);
+	background: var(--back-btn-hover);
 }
 
 .wrappers .btns_wrap .common_btns button.btn_back:hover{
-	background: var(--back-btn-hover);
+	background: var(--next-btn-hover);
 }
 
 .modal_wrapper{
