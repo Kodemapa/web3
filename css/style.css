@@ -5,7 +5,9 @@ body {
   background-color: #ffffff;
   overflow-x: hidden;
 }
-
+.grey-bg {  
+  background-color: #F5F7FA;
+}
 .layout_padding {
   padding: 90px 0;
 }

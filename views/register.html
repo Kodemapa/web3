@@ -54,11 +54,12 @@
                 <span ng-show="registrationForm.retypePassword.$error.required && registrationForm.retypePassword.$dirty" class="help-block">Retype Password is required</span>
                 <span ng-show="user.password !== user.retypePassword && registrationForm.retypePassword.$dirty" class="help-block">Passwords do not match</span>
             </div>
-            
-            <button type="submit" class="btn btn-primary btn-block btn-flat" ng-disabled="registrationForm.$invalid || user.password !== user.retypePassword" ng-submit="">Register</button>
+            <a href="../index.html">
+            <button type="submit" class="btn btn-primary btn-block btn-flat" ng-disabled="registrationForm.$invalid || user.password !== user.retypePassword" >Register</button>
+        </a>
         </form>
 
-        <a href="index.html" class="text-center">I already have a membership</a>
+        <a href="../index.html" class="text-center">I already have a membership</a>
     </div><!-- /.form-box -->
 </div><!-- /.register-box -->
 

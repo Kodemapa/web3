@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Featured Projects</title>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+  <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+  <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+  <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <script src="../lib/min.js"></script>
+  <script src="../js/feature-controller.js"></script>
+</head>
+<body ng-app="app" ng-controller="projectController">
+
+<div class="grey-bg container-fluid">
+
+<section id="stats-subtitle">
+  <div class="row">
+    <div class="col-12 mt-3 mb-1">
+      <h4 class="text-uppercase">Featured Projects</h4>
+      <p>Invest In The Most Profitable Projects</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-6 col-md-12" ng-repeat="project in projects">
+      <div class="card">
+        <div class="card-content">
+          <div class="card-body clearfix">
+            <div class="media align-items-stretch">
+              <div class="align-self-center">
+                <h1 class="mr-2">{{ project.totalFunding }}</h1>
+              </div>
+              <div class="media-body">
+                <h4>{{ project.startupName }}</h4>
+                <span>{{ project.category }}</span>  <span> <i class="icon-pencil">{{ project.city }}</i></span> <span>{{ project.website }}</span>
+              </div>
+              <div class="align-self-center">
+                <input type="button" class="btn btn-primary" value="Fund Now" ng-click="fundProject(project)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+</body>
+</html>
