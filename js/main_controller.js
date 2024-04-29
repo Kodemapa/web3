@@ -18,6 +18,7 @@ app.controller("ControllerName", function ($scope, $http) {
       $scope.whyChooseUs = $scope.pageInfo.whyChooseUs;
       $scope.projects = $scope.pageInfo.projects;
     },
+    
     function (error) {
       // Handle error
       console.error("Error loading JSON:", error);
@@ -29,6 +30,7 @@ app.controller("ControllerName", function ($scope, $http) {
       $scope.projectInfo = response.data.slice(0, 10);
       console.log("json", $scope.projectInfo);
     },
+    
     function (error) {
       console.error("Error Loading JSON:", error);
     }

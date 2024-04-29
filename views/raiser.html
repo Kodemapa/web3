@@ -85,7 +85,7 @@
                 <div class="form_container">
                     <div class="input_wrap">
                         <label for="funding">{{funding_info.heading1}}<span class="star">*</span></label>
-                        <input type="text" id="funding" name="funding" class="input" maxlength="5" ng-pattern="/^\d{1,3}(\.\d{1,2})?$/"
+                        <input type="text" id="funding" name="funding" class="input" maxlength="8" ng-pattern="/^\d{1,7}(\.\d{1,3})?$/"
                          ng-model="funding_info_entered.Total_Funding" required="">
                         <span ng-show="fundingForm.funding.$dirty && fundingForm.funding.$touched">
                             <span class="caution" ng-show="fundingForm.funding.$error.required"><i class="fa fa-exclamation-circle"></i>This field is Required</span>
@@ -94,7 +94,7 @@
                     </div>
                     <div class="input_wrap">
                         <label for="rounds">{{funding_info.heading2}}<span class="star">*</span></label>
-                        <input type="text" id="rounds" name="rounds" class="input" maxlength="5" ng-pattern="/^\d{1,3}(\.\d{1,2})?$/" ng-model="funding_info_entered.Number_of_Rounds" required="">
+                        <input type="text" id="rounds" name="rounds" class="input" maxlength="8" ng-pattern="/^\d{1,7}(\.\d{1,3})?$/" ng-model="funding_info_entered.Number_of_Rounds" required="">
                         <span ng-show="fundingForm.rounds.$dirty && fundingForm.rounds.$touched">
                             <span class="caution" ng-show="fundingForm.rounds.$error.required"><i class="fa fa-exclamation-circle"></i>This field is Required</span>
                         </span>  
@@ -102,7 +102,7 @@
                     </div>
                     <div class="input_wrap">
                         <label for="age">{{funding_info.heading3}}<span class="star">*</span></label>
-                        <input type="text" id="age" name="age" class="input" maxlength="5" ng-pattern="/^\d{1,3}(\.\d{1,2})?$/" ng-model="funding_info_entered.Age" required="">
+                        <input type="text" id="age" name="age" class="input" maxlength="3" ng-pattern="/^\d{1,3}(\.\d{1,2})?$/" ng-model="funding_info_entered.Age" required="">
                         <span ng-show="fundingForm.age.$dirty && fundingForm.age.$touched">
                             <span class="caution" ng-show="fundingForm.age.$error.required"><i class="fa fa-exclamation-circle"></i>  Required</span>
                         </span>
@@ -118,7 +118,7 @@
                 <div class="form_container">
                     <div class="input_wrap">
                         <label for="operation">{{operation_info.heading1}}<span class="star">*</span></label>
-                        <input type="text" id="operation" name="operation" class="input" maxlength="5" ng-pattern="/^\d{1,3}(\.\d{1,2})?$/" ng-model="operation_info_entered.Operation" required>
+                        <input type="text" id="operation" name="operation" class="input" maxlength="8" ng-pattern="/^\d{1,7}(\.\d{1,3})?$/" ng-model="operation_info_entered.Operation" required>
                         <span ng-show="operationForm.operation.$dirty && operationForm.operation.$touched">
                             <span class="caution" ng-show="operationForm.operation.$error.required"><i class="fa fa-exclamation-circle"></i>This field is Required</span>
                         </span> 
@@ -262,7 +262,7 @@
         <div class="common_btns form_5_btns" style="display: none;">
             <button type="button" class="btn_back" ng-class="{'disabled':categoryForm.$valid}"><span class="icon"><ion-icon
                         name="arrow-back-sharp"></ion-icon></span>Back</button>
-            <button type="button" class="btn_done" ng-class="{'disabled':investForm.$valid}" ng-disabled="investForm.$invalid" ng-click="show_values()">Submit</button>
+            <button type="button" class="btn_done" ng-click="show_values()" ng-class="{'disabled':investForm.$valid}" ng-disabled="investForm.$invalid">Submit</button>
         </div>
     </div>
 </div>
